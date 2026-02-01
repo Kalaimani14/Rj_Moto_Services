@@ -1,0 +1,66 @@
+.brands-section {
+  padding: 70px 10%;
+  background: #0b0b0b;
+  text-align: center;
+  color: white;
+}
+
+.brands-title {
+  font-size: 2.5rem;
+  color: #ffd700;
+}
+
+.brands-subtitle {
+  color: #e0e0e0;
+  margin-bottom: 40px;
+}
+
+/* Grid Layout */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+
+/* Brand Card */
+.brand-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  border-bottom: 3px solid #ffd700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+}
+
+/* Brand Logo */
+.brand-card img {
+  width: 90px;
+  filter: grayscale(100%);
+  transition: 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.brand-card:hover img {
+  filter: grayscale(0%);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

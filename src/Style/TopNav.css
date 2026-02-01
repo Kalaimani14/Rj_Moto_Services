@@ -1,115 +1,75 @@
-/* ========== TOP NAV STYLING (Add this BELOW your CSS) ========== */
-
 .top-nav {
-  width: 100%;
-  background: linear-gradient(90deg, #0f172a, #1e293b, #0f172a);
-  background-size: 200% 200%;
-  color: white;
-  padding: 10px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
-  animation: bgMove 6s infinite alternate, slideDown 0.6s ease-in-out;
+  width: 100%;
+
 }
 
-/* Animated gradient background */
-@keyframes bgMove {
-  from {
-    background-position: 0% 50%;
-  }
-  to {
-    background-position: 100% 50%;
-  }
+.tc {
+  background: #ea7135e4;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  padding: 8px 0;
+  border-bottom: 2px solid #ffd700;
+  font-size: 1.3rem;
 }
 
-/* Smooth entry animation */
-@keyframes slideDown {
-  from {
-    transform: translateY(-15px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Improve spacing inside grid */
-.top-nav .grid-2 {
+.container {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #ffd700;
+  /* gold accent */
 }
 
-/* Left section (email & phone) */
-.top-nav .grid-sec:first-child {
-  justify-content: flex-start;
-    gap: 14px;
+/* Left side */
+.topnav-left {
+  display: flex;
+  align-items: center;
 }
 
-/* Right section (social links) */
-.top-nav .grid-sec:last-child {
-  justify-content: flex-end;
-  gap: 18px;
+.topnav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 20px;
 }
 
-/* Links styling */
-.top-nav a {
-  color: #e5e7eb;
+.topnav-item a {
+  color: white;
   text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: 0.3s;
 }
 
-.top-nav a:hover {
-  color: #38bdf8;
-  transform: translateY(-2px);
+.topnav-item a:hover {
+  color: #ffd700;
 }
 
-/* SVG icons */
-.top-nav svg {
-  width: 18px;
-  height: 18px;
-  fill: white;
-  transition: transform 0.3s ease, fill 0.3s ease;
-  cursor: pointer;
+/* Icon styling */
+.icon {
+  color: #ffffff;
+
 }
 
-/* Icon hover animation */
-.top-nav svg:hover {
-  transform: scale(1.2) rotate(5deg);
-  fill: #38bdf8;
+/* Right side */
+.topnav-right {
+  display: flex;
+  align-items: center;
 }
 
-/* WhatsApp special hover */
-.top-nav a[href*="whatsapp"]:hover {
-  color: #25d366;
-}
-
-/* Small divider line between left & right */
-.top-nav .grid-2::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  height: 20px;
-  width: 1px;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* Responsive for mobile */
+/* Responsive */
 @media (max-width: 768px) {
-  .top-nav .grid-2 {
+  .container {
     flex-direction: column;
-    gap: 10px;
-    text-align: center;
+    gap: 8px;
   }
 
-  .top-nav .grid-sec {
+  .topnav-left,
+  .topnav-right {
     justify-content: center;
-  }
-
-  .top-nav .grid-2::after {
-    display: none;
   }
 }

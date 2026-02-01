@@ -1,0 +1,118 @@
+/* Navbar container */
+.navbar {
+  width: 100%;
+  padding: 15px;
+  background: #0b0b0b; /* premium black */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  border-radius: 50px 20px;
+  background: rgba(255, 255, 255, 0.15); /* transparent */
+  backdrop-filter: blur(10px);          /* blur effect */
+  -webkit-backdrop-filter: blur(15px);  /* Safari support */
+ 
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  
+}
+
+.max-w {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+/* Left: Logo */
+.nav-logo a {
+  color: #ffd700; /* gold */
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-logo a:hover {
+  color: #ff4b2b; /* red accent */
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+/* Center: Menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  transition: 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #ffd700;
+  border-bottom: 2px solid #ffd700;
+  transform: scale(1.05);
+}
+
+/* Right: Buttons */
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.book-now {
+  background: linear-gradient(45deg, #ffd700, #ffcc00);
+  color: black;
+}
+
+.book-now:hover {
+  background: black;
+  color: #ffd700;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(255, 215, 0, 0.5);
+}
+
+.partner {
+  background: #ff416c; /* pink/red gradient */
+  color: white;
+}
+
+.partner:hover {
+  background: #ff4b2b;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(255, 65, 108, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .max-w {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .nav-menu {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .nav-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
